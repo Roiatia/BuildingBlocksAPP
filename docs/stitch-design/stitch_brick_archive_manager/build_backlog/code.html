@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>BrickVault - Build Backlog</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&amp;family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #FAFAFA;
+        }
+        /* Custom scrollbar for horizontal chips */
+        .hide-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .hide-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+    </style>
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              "colors": {
+                      "outline": "#926e6b",
+                      "on-primary": "#ffffff",
+                      "error-container": "#ffdad6",
+                      "on-tertiary-fixed-variant": "#584400",
+                      "on-surface-variant": "#5d3f3c",
+                      "on-primary-fixed-variant": "#93000f",
+                      "on-surface": "#1a1c1c",
+                      "surface-container-high": "#e8e8e8",
+                      "surface-container": "#eeeeee",
+                      "tertiary-fixed": "#ffe08b",
+                      "on-error-container": "#93000a",
+                      "on-background": "#1a1c1c",
+                      "tertiary": "#745b00",
+                      "surface-container-low": "#f3f3f3",
+                      "error": "#ba1a1a",
+                      "on-secondary": "#ffffff",
+                      "tertiary-fixed-dim": "#f1c100",
+                      "primary-fixed-dim": "#ffb3ac",
+                      "secondary-fixed": "#d5e3ff",
+                      "on-tertiary": "#ffffff",
+                      "surface-tint": "#c00017",
+                      "on-secondary-fixed-variant": "#004689",
+                      "secondary-fixed-dim": "#a8c8ff",
+                      "outline-variant": "#e7bdb8",
+                      "on-primary-container": "#ffdfdc",
+                      "primary-fixed": "#ffdad6",
+                      "on-tertiary-container": "#4f3d00",
+                      "secondary-container": "#72aafe",
+                      "inverse-primary": "#ffb3ac",
+                      "primary-container": "#d0021b",
+                      "on-secondary-fixed": "#001b3c",
+                      "surface": "#f9f9f9",
+                      "surface-container-highest": "#e2e2e2",
+                      "on-secondary-container": "#003d79",
+                      "surface-variant": "#e2e2e2",
+                      "surface-bright": "#f9f9f9",
+                      "tertiary-container": "#d0a600",
+                      "surface-dim": "#dadada",
+                      "on-tertiary-fixed": "#241a00",
+                      "on-error": "#ffffff",
+                      "surface-container-lowest": "#ffffff",
+                      "inverse-on-surface": "#f0f1f1",
+                      "inverse-surface": "#2f3131",
+                      "background": "#f9f9f9",
+                      "secondary": "#175ead",
+                      "on-primary-fixed": "#410003",
+                      "primary": "#a30012"
+              },
+              "borderRadius": {
+                      "DEFAULT": "0.25rem",
+                      "lg": "0.5rem",
+                      "xl": "0.75rem",
+                      "full": "9999px"
+              },
+              "spacing": {
+                      "margin-mobile": "16px",
+                      "unit": "4px",
+                      "stack-sm": "8px",
+                      "stack-md": "16px",
+                      "stack-lg": "24px",
+                      "gutter": "12px"
+              },
+              "fontFamily": {
+                      "headline-lg": ["Inter"],
+                      "headline-lg-mobile": ["Inter"],
+                      "body-md": ["Inter"],
+                      "label-sm": ["Inter"],
+                      "title-md": ["Inter"]
+              },
+              "fontSize": {
+                      "headline-lg": ["32px", {"lineHeight": "40px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                      "headline-lg-mobile": ["24px", {"lineHeight": "32px", "letterSpacing": "-0.01em", "fontWeight": "700"}],
+                      "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                      "label-sm": ["12px", {"lineHeight": "16px", "letterSpacing": "0.05em", "fontWeight": "600"}],
+                      "title-md": ["18px", {"lineHeight": "24px", "fontWeight": "600"}]
+              }
+            },
+          },
+        }
+      </script>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background text-on-surface">
+<!-- TopAppBar -->
+<header class="bg-surface docked full-width top-0 sticky z-40 flex justify-between items-center w-full px-margin-mobile h-16">
+<div class="flex items-center gap-4">
+<span class="material-symbols-outlined text-primary cursor-pointer active:opacity-80 transition-opacity" data-icon="grid_view">grid_view</span>
+<h1 class="font-headline-lg-mobile text-headline-lg-mobile font-bold text-primary">BrickVault</h1>
+</div>
+<div class="flex items-center gap-2">
+<div class="w-8 h-8 rounded-full overflow-hidden bg-surface-container-high border border-outline-variant">
+<img alt="User Profile" class="w-full h-full object-cover" data-alt="A professional studio portrait of a modern male professional with clean features, soft directional lighting against a neutral gray background. The overall aesthetic is clean, corporate, and high-fidelity, reflecting a sophisticated user persona for a premium inventory application." src="https://lh3.googleusercontent.com/aida-public/AB6AXuA5IpTHgwBN_31d5ez0hdUDhOf9wCU2EzmauivJjzvgHl5u7zeV4boN_8W97Et4wr1vK9R3o5xtn_C8ELeSMFej3Y3ueFLjN1cJ53dqHnUNBkENWgd04qEylDocYAOs4AKkqYKphYhazFsQTaw77X-Lff8nVxhR_rhMYEEuOT4K6QUC62HDybp-kcb9C_mKEekiX7hLN8D0IbnPFUYCCQkH2hPckSD4pebde-d8Wwzr7YmY3NYRDAX8wFEfLM77Oxh3b-TRwmuVSlY"/>
+</div>
+</div>
+</header>
+<main class="pb-24 pt-4 px-margin-mobile">
+<!-- Screen Header & Main Action -->
+<div class="flex flex-col gap-4 mb-stack-lg">
+<div>
+<h2 class="font-headline-lg-mobile text-headline-lg-mobile text-on-surface">Build Backlog</h2>
+<p class="font-body-md text-body-md text-on-surface-variant">Manage your unbuilt and sealed inventory.</p>
+</div>
+<button class="w-full py-3 px-6 rounded-lg border border-primary text-primary font-title-md text-title-md bg-transparent flex items-center justify-center gap-2 hover:bg-primary-fixed active:scale-95 transition-all">
+<span class="material-symbols-outlined" data-icon="auto_awesome">auto_awesome</span>
+                Pick a set for me
+            </button>
+</div>
+<!-- Sorting Chips -->
+<div class="flex overflow-x-auto gap-2 mb-stack-lg hide-scrollbar pb-1">
+<button class="flex-shrink-0 px-4 py-2 rounded-full bg-secondary-container text-on-secondary-container font-label-sm text-label-sm flex items-center gap-1 border border-transparent">
+<span class="material-symbols-outlined text-[18px]" data-icon="history">history</span>
+                Oldest first
+            </button>
+<button class="flex-shrink-0 px-4 py-2 rounded-full bg-surface-container-low text-on-surface-variant font-label-sm text-label-sm flex items-center gap-1 border border-outline-variant hover:bg-surface-container-high transition-colors">
+<span class="material-symbols-outlined text-[18px]" data-icon="layers">layers</span>
+                Most pieces
+            </button>
+<button class="flex-shrink-0 px-4 py-2 rounded-full bg-surface-container-low text-on-surface-variant font-label-sm text-label-sm flex items-center gap-1 border border-outline-variant hover:bg-surface-container-high transition-colors">
+<span class="material-symbols-outlined text-[18px]" data-icon="bolt">bolt</span>
+                Easiest
+            </button>
+<button class="flex-shrink-0 px-4 py-2 rounded-full bg-surface-container-low text-on-surface-variant font-label-sm text-label-sm flex items-center gap-1 border border-outline-variant hover:bg-surface-container-high transition-colors">
+<span class="material-symbols-outlined text-[18px]" data-icon="priority_high">priority_high</span>
+                Highest priority
+            </button>
+</div>
+<!-- Backlog Grid -->
+<div class="grid grid-cols-1 md:grid-cols-2 gap-gutter">
+<!-- Card 1: Sealed -->
+<div class="bg-surface-container-lowest rounded-lg border border-[#E0E0E0] overflow-hidden shadow-sm flex flex-col active:bg-surface-variant transition-colors group">
+<div class="relative aspect-[4/3] overflow-hidden bg-surface-container">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="A highly detailed close-up of a complex mechanical LEGO car engine set, sitting on a clean architectural drafting table. The lighting is crisp and cool, highlighting the precision-engineered plastic components and technical gears. The scene is minimal, professional, and sophisticated, avoiding any toy-like clutter." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAka2wvLz82sWaXnmzRN6VQPqo5BrJqkbxUpGnASa8DjZjclIkPGA1KCRf1P38XGX8pAAIAPmv-sC0IlibL1a-WidKEjw5ciLKZaZ5SwFrEevtLsDpxApcyeJ6IaIoDHAE6RrourQ1xjEsmMLw4RCeTcQ5N7R5ZHvrmohiDGaJELzJO3dKQoTUx9FyapwyQshHXU0_0vH1rWmmLdqWZpyvQzK-57nW6-Ck9Fqg7uqctWIsbU822_vdXDIkEhLgL3JZG07L-qWNAOnY"/>
+<div class="absolute top-2 right-2 bg-white/90 backdrop-blur-md px-2 py-1 rounded border border-outline-variant">
+<span class="font-label-sm text-label-sm text-on-surface-variant">#10295</span>
+</div>
+</div>
+<div class="p-4 flex flex-col gap-2">
+<div class="flex justify-between items-start">
+<span class="px-2 py-0.5 rounded bg-[#4CAF50]/15 text-[#2E7D32] font-label-sm text-label-sm">SEALED</span>
+<div class="flex items-center text-on-surface-variant font-label-sm text-label-sm gap-1">
+<span class="material-symbols-outlined text-[14px]" data-icon="schedule">schedule</span>
+                            Waiting 142 days
+                        </div>
+</div>
+<h3 class="font-title-md text-title-md text-on-surface line-clamp-1">Porsche 911 Targa</h3>
+<div class="flex items-center gap-4 text-on-surface-variant font-label-sm text-label-sm">
+<span class="flex items-center gap-1"><span class="material-symbols-outlined text-[16px]" data-icon="parts_mode">all_mode</span> 1,458 pcs</span>
+<span class="flex items-center gap-1"><span class="material-symbols-outlined text-[16px]" data-icon="sell">sell</span> $169.99</span>
+</div>
+</div>
+</div>
+<!-- Card 2: Unbuilt -->
+<div class="bg-surface-container-lowest rounded-lg border border-[#E0E0E0] overflow-hidden shadow-sm flex flex-col active:bg-surface-variant transition-colors group">
+<div class="relative aspect-[4/3] overflow-hidden bg-surface-container">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="A macro shot of vibrant colorful interlocking building blocks arranged in a clean, geometric pattern. The surface is pristine and matte, illuminated by bright, even daylight coming from a large gallery window. The focus is sharp on the technical tolerances between pieces, creating a high-end archival feel." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBrZ1dZfLju8Kr5zVpiQHYdWpy3Be9sNq-ucSrVMcYSr6D22Sqh5ULD0-YOI-4JsEorQlWsn6XeEhsmYy11WpNtW-_akBxHBrREFRrdTHMJX-jrpTGmeylgw3GhSUXTdLnJN5sPivwArg4R7x6VXeGMBkpLDfiwGSJ1xWT63di2_iKpADU-82Dx6Wq8FP8NDumVdaDTFtZCbbyYwGSQ7CmdqVSr0s7Ewag_uhxh0EaiJ9SutnmBROrvqg1exouGtHauPHi3mt1jc4o"/>
+<div class="absolute top-2 right-2 bg-white/90 backdrop-blur-md px-2 py-1 rounded border border-outline-variant">
+<span class="font-label-sm text-label-sm text-on-surface-variant">#10300</span>
+</div>
+</div>
+<div class="p-4 flex flex-col gap-2">
+<div class="flex justify-between items-start">
+<span class="px-2 py-0.5 rounded bg-surface-container-highest text-on-surface-variant font-label-sm text-label-sm">UNBUILT</span>
+<div class="flex items-center text-on-surface-variant font-label-sm text-label-sm gap-1">
+<span class="material-symbols-outlined text-[14px]" data-icon="schedule">schedule</span>
+                            Waiting 45 days
+                        </div>
+</div>
+<h3 class="font-title-md text-title-md text-on-surface line-clamp-1">DeLorean Time Machine</h3>
+<div class="flex items-center gap-4 text-on-surface-variant font-label-sm text-label-sm">
+<span class="flex items-center gap-1"><span class="material-symbols-outlined text-[16px]" data-icon="parts_mode">all_mode</span> 1,872 pcs</span>
+<span class="flex items-center gap-1"><span class="material-symbols-outlined text-[16px]" data-icon="sell">sell</span> $199.99</span>
+</div>
+</div>
+</div>
+<!-- Card 3: Sealed -->
+<div class="bg-surface-container-lowest rounded-lg border border-[#E0E0E0] overflow-hidden shadow-sm flex flex-col active:bg-surface-variant transition-colors group">
+<div class="relative aspect-[4/3] overflow-hidden bg-surface-container">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="A sophisticated architectural model of a modern cityscape created from white and translucent blocks, displayed in a high-end minimalist apartment. Soft morning sunlight casts long, elegant shadows across the model. The aesthetic is clean, professional, and archival, emphasizing the hobby as a serious investment." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDd_3ecn7316hFesNOeIcJgdwAtvlyiJQ7NXdl0kSsbwnXlyb7-mbB0g0UPzZiTZUwhrRA1WnoU3edUMfQK4Y2T87HdMjszYS4ytWD3Tz8etPn7fayL-HOoRboEn-2d2igrK4AVJDwqpe72OuNTaAmG1UGZhw6RQAhC4RXZdzMvlg4Nt1Ji61rDH2W-An0opMNFztv-7crVQEjsqPHctsCoLILNU4pSQQ6crgKKSnp6vw86IzAzVz5p1yc3J84Mxgm7ePYeYQSzwvg"/>
+<div class="absolute top-2 right-2 bg-white/90 backdrop-blur-md px-2 py-1 rounded border border-outline-variant">
+<span class="font-label-sm text-label-sm text-on-surface-variant">#21058</span>
+</div>
+</div>
+<div class="p-4 flex flex-col gap-2">
+<div class="flex justify-between items-start">
+<span class="px-2 py-0.5 rounded bg-[#4CAF50]/15 text-[#2E7D32] font-label-sm text-label-sm">SEALED</span>
+<div class="flex items-center text-on-surface-variant font-label-sm text-label-sm gap-1">
+<span class="material-symbols-outlined text-[14px]" data-icon="schedule">schedule</span>
+                            Waiting 210 days
+                        </div>
+</div>
+<h3 class="font-title-md text-title-md text-on-surface line-clamp-1">Great Pyramid of Giza</h3>
+<div class="flex items-center gap-4 text-on-surface-variant font-label-sm text-label-sm">
+<span class="flex items-center gap-1"><span class="material-symbols-outlined text-[16px]" data-icon="parts_mode">all_mode</span> 1,476 pcs</span>
+<span class="flex items-center gap-1"><span class="material-symbols-outlined text-[16px]" data-icon="sell">sell</span> $129.99</span>
+</div>
+</div>
+</div>
+<!-- Card 4: Unbuilt -->
+<div class="bg-surface-container-lowest rounded-lg border border-[#E0E0E0] overflow-hidden shadow-sm flex flex-col active:bg-surface-variant transition-colors group">
+<div class="relative aspect-[4/3] overflow-hidden bg-surface-container">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="An artistic display of organized building components on a dark walnut wood table. The pieces are sorted by color and size into sleek, white ceramic trays. The lighting is warm and cinematic, highlighting the vibrant primary colors of the parts against the professional setting of a collector's studio." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCIva9ecFJ0EV_9t5i5yf7xg2PCD1oDa0zZIk_fLaVTUCUE2SjUqdP4Y7PvygHRxXbFuYj2Pzx-nYM9RBByfUyM-eRvjAZdtQSYPDUPue-PNYbmnYWhNxpNO7d4dwFoG4mMC8ulU5b8tjfATZIDUz7iCBhVe6uzO76Sgb9xydKbYKOFLtYjXsYYKQRSFILbpHtfCEWQ-gc9Q-XJM5ojmA6KGLL4nZfUtkBenQh9ETbqVAyeC1mRR-I19I6OOOj_K0RCdb68OiiZaNA"/>
+<div class="absolute top-2 right-2 bg-white/90 backdrop-blur-md px-2 py-1 rounded border border-outline-variant">
+<span class="font-label-sm text-label-sm text-on-surface-variant">#75333</span>
+</div>
+</div>
+<div class="p-4 flex flex-col gap-2">
+<div class="flex justify-between items-start">
+<span class="px-2 py-0.5 rounded bg-surface-container-highest text-on-surface-variant font-label-sm text-label-sm">UNBUILT</span>
+<div class="flex items-center text-on-surface-variant font-label-sm text-label-sm gap-1">
+<span class="material-symbols-outlined text-[14px]" data-icon="schedule">schedule</span>
+                            Waiting 12 days
+                        </div>
+</div>
+<h3 class="font-title-md text-title-md text-on-surface line-clamp-1">Obi-Wan Kenobi's Starfighter</h3>
+<div class="flex items-center gap-4 text-on-surface-variant font-label-sm text-label-sm">
+<span class="flex items-center gap-1"><span class="material-symbols-outlined text-[16px]" data-icon="parts_mode">all_mode</span> 282 pcs</span>
+<span class="flex items-center gap-1"><span class="material-symbols-outlined text-[16px]" data-icon="sell">sell</span> $29.99</span>
+</div>
+</div>
+</div>
+</div>
+</main>
+<!-- BottomNavBar -->
+<nav class="fixed bottom-0 left-0 w-full z-50 flex justify-around items-center h-20 pb-safe px-2 bg-surface border-t border-outline-variant">
+<a class="flex flex-col items-center justify-center text-on-surface-variant px-5 py-1 hover:text-primary transition-all active:scale-95" href="#">
+<span class="material-symbols-outlined" data-icon="dashboard">dashboard</span>
+<span class="font-label-sm text-label-sm mt-1">Home</span>
+</a>
+<a class="flex flex-col items-center justify-center text-on-surface-variant px-5 py-1 hover:text-primary transition-all active:scale-95" href="#">
+<span class="material-symbols-outlined" data-icon="inventory_2">inventory_2</span>
+<span class="font-label-sm text-label-sm mt-1">Collection</span>
+</a>
+<a class="flex flex-col items-center justify-center bg-secondary-container text-on-secondary-container rounded-full px-5 py-1 transition-all active:scale-95" href="#">
+<span class="material-symbols-outlined" data-icon="precision_manufacturing" style="font-variation-settings: 'FILL' 1;">precision_manufacturing</span>
+<span class="font-label-sm text-label-sm mt-1">Backlog</span>
+</a>
+<a class="flex flex-col items-center justify-center text-on-surface-variant px-5 py-1 hover:text-primary transition-all active:scale-95" href="#">
+<span class="material-symbols-outlined" data-icon="inventory">inventory</span>
+<span class="font-label-sm text-label-sm mt-1">Storage</span>
+</a>
+<a class="flex flex-col items-center justify-center text-on-surface-variant px-5 py-1 hover:text-primary transition-all active:scale-95" href="#">
+<span class="material-symbols-outlined" data-icon="person">person</span>
+<span class="font-label-sm text-label-sm mt-1">Profile</span>
+</a>
+</nav>
+<script>
+        // Simple micro-interaction for chips
+        document.querySelectorAll('button.flex-shrink-0').forEach(button => {
+            button.addEventListener('click', function() {
+                // Clear active state from others
+                document.querySelectorAll('button.flex-shrink-0').forEach(b => {
+                    b.classList.remove('bg-secondary-container', 'text-on-secondary-container');
+                    b.classList.add('bg-surface-container-low', 'text-on-surface-variant', 'border-outline-variant');
+                });
+                // Set active state for this
+                this.classList.remove('bg-surface-container-low', 'text-on-surface-variant', 'border-outline-variant');
+                this.classList.add('bg-secondary-container', 'text-on-secondary-container', 'border-transparent');
+            });
+        });
+
+        // "Pick for me" animation
+        const pickBtn = document.querySelector('button.border-primary');
+        pickBtn.addEventListener('click', () => {
+            pickBtn.innerHTML = '<span class="material-symbols-outlined animate-spin" data-icon="autorenew">autorenew</span> Picking...';
+            setTimeout(() => {
+                pickBtn.innerHTML = '<span class="material-symbols-outlined" data-icon="auto_awesome">auto_awesome</span> Pick a set for me';
+                // Select a random card to highlight
+                const cards = document.querySelectorAll('.grid > div');
+                const randomCard = cards[Math.floor(Math.random() * cards.length)];
+                randomCard.classList.add('ring-4', 'ring-primary-container', 'scale-[1.02]');
+                randomCard.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                setTimeout(() => {
+                    randomCard.classList.remove('ring-4', 'ring-primary-container', 'scale-[1.02]');
+                }, 2000);
+            }, 800);
+        });
+    </script>
+</body></html>

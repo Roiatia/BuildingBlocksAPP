@@ -1,0 +1,4 @@
+-keep class com.buildingblocks.app.data.local.entity.** { *; }
+-keep class com.buildingblocks.app.domain.model.** { *; }
+-dontwarn io.ktor.**
+-dontwarn io.github.jan.**

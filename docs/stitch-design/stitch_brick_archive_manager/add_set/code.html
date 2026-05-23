@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Add New Set - BrickVault</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "outline": "#926e6b",
+                        "on-primary": "#ffffff",
+                        "error-container": "#ffdad6",
+                        "on-tertiary-fixed-variant": "#584400",
+                        "on-surface-variant": "#5d3f3c",
+                        "on-primary-fixed-variant": "#93000f",
+                        "on-surface": "#1a1c1c",
+                        "surface-container-high": "#e8e8e8",
+                        "surface-container": "#eeeeee",
+                        "tertiary-fixed": "#ffe08b",
+                        "on-error-container": "#93000a",
+                        "on-background": "#1a1c1c",
+                        "tertiary": "#745b00",
+                        "surface-container-low": "#f3f3f3",
+                        "error": "#ba1a1a",
+                        "on-secondary": "#ffffff",
+                        "tertiary-fixed-dim": "#f1c100",
+                        "primary-fixed-dim": "#ffb3ac",
+                        "secondary-fixed": "#d5e3ff",
+                        "on-tertiary": "#ffffff",
+                        "surface-tint": "#c00017",
+                        "on-secondary-fixed-variant": "#004689",
+                        "secondary-fixed-dim": "#a8c8ff",
+                        "outline-variant": "#e7bdb8",
+                        "on-primary-container": "#ffdfdc",
+                        "primary-fixed": "#ffdad6",
+                        "on-tertiary-container": "#4f3d00",
+                        "secondary-container": "#72aafe",
+                        "inverse-primary": "#ffb3ac",
+                        "primary-container": "#d0021b",
+                        "on-secondary-fixed": "#001b3c",
+                        "surface": "#f9f9f9",
+                        "surface-container-highest": "#e2e2e2",
+                        "on-secondary-container": "#003d79",
+                        "surface-variant": "#e2e2e2",
+                        "surface-bright": "#f9f9f9",
+                        "tertiary-container": "#d0a600",
+                        "surface-dim": "#dadada",
+                        "on-tertiary-fixed": "#241a00",
+                        "on-error": "#ffffff",
+                        "surface-container-lowest": "#ffffff",
+                        "inverse-on-surface": "#f0f1f1",
+                        "inverse-surface": "#2f3131",
+                        "background": "#f9f9f9",
+                        "secondary": "#175ead",
+                        "on-primary-fixed": "#410003",
+                        "primary": "#a30012"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "margin-mobile": "16px",
+                        "unit": "4px",
+                        "stack-sm": "8px",
+                        "stack-md": "16px",
+                        "stack-lg": "24px",
+                        "gutter": "12px"
+                    },
+                    "fontFamily": {
+                        "headline-lg": ["Inter"],
+                        "headline-lg-mobile": ["Inter"],
+                        "body-md": ["Inter"],
+                        "label-sm": ["Inter"],
+                        "title-md": ["Inter"]
+                    },
+                    "fontSize": {
+                        "headline-lg": ["32px", {"lineHeight": "40px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                        "headline-lg-mobile": ["24px", {"lineHeight": "32px", "letterSpacing": "-0.01em", "fontWeight": "700"}],
+                        "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                        "label-sm": ["12px", {"lineHeight": "16px", "letterSpacing": "0.05em", "fontWeight": "600"}],
+                        "title-md": ["18px", {"lineHeight": "24px", "fontWeight": "600"}]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f9f9f9;
+        }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .input-focus-ring:focus-within {
+            border-color: #175ead;
+            border-width: 2px;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background text-on-surface mb-24">
+<!-- Top App Bar -->
+<header class="bg-surface dark:bg-surface-dim flex justify-between items-center w-full px-margin-mobile h-16 sticky top-0 z-50">
+<div class="flex items-center gap-4">
+<button class="material-symbols-outlined text-on-surface-variant hover:bg-surface-container-low rounded-full p-2 transition-colors">arrow_back</button>
+<h1 class="font-headline-lg-mobile text-headline-lg-mobile font-bold text-primary">BrickVault</h1>
+</div>
+<div class="flex items-center gap-2">
+<img alt="User Profile" class="w-8 h-8 rounded-full bg-surface-container" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDoCpL1YKi0qV_RjD_g1DpLEnItUylbbYC6gI-7lCq4Zrx8Xm0gbTnP_6oZyR6F2L11lZDt7w6_rhzPa6IGUOrgsJmr6J94MwRBUjkGe0NGQnoVAVmhlhyUEnsVvLf0gFWDZdf8rbie6w0w2PhuADX32TAIhZ2WhBlx4JQ_XvB0O4aab3BmMEhzk_BGxrGdVueb70XIyQUCGPf9YtIgXiGSfpqPNAzx5GN8x-BUhodEqr7QtTdOO3Fcy1eJvw-D8Xiq-4yynCoVh4M"/>
+</div>
+</header>
+<main class="max-w-2xl mx-auto px-margin-mobile py-stack-lg">
+<header class="mb-stack-lg">
+<h2 class="font-headline-lg text-headline-lg text-on-surface mb-2">Add New Set</h2>
+<p class="font-body-md text-body-md text-on-surface-variant">Log a new addition to your archival inventory.</p>
+</header>
+<form class="space-y-stack-lg" id="add-set-form">
+<!-- Hero Image Upload Area -->
+<div class="relative group">
+<label class="cursor-pointer block" for="image-upload">
+<div class="w-full aspect-video rounded-xl bg-surface-container-high border-2 border-dashed border-outline-variant flex flex-col items-center justify-center overflow-hidden transition-all group-hover:bg-surface-container-highest">
+<div class="text-center p-6" id="image-placeholder">
+<span class="material-symbols-outlined text-4xl text-on-surface-variant mb-2">add_a_photo</span>
+<p class="font-title-md text-title-md text-on-surface">Upload Set Image</p>
+<p class="font-label-sm text-label-sm text-on-surface-variant">Optional (High-resolution recommended)</p>
+</div>
+<img class="hidden absolute inset-0 w-full h-full object-cover" data-alt="A clean, minimalist studio shot of a complex Lego architectural model on a white pedestal. The lighting is bright and even, casting soft shadows, following a professional product photography style with a vibrant red accent in the background. High-key aesthetic with sharp focus on the precision-engineered plastic bricks." id="image-preview"/>
+</div>
+</label>
+<input accept="image/*" class="hidden" id="image-upload" type="file"/>
+</div>
+<!-- Mandatory Fields Group -->
+<section class="bg-surface-container-lowest p-stack-md rounded-xl border border-outline-variant shadow-sm">
+<h3 class="font-label-sm text-label-sm text-primary mb-stack-sm uppercase tracking-wider">Required Information</h3>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-stack-md">
+<!-- Set Name/Number -->
+<div class="flex flex-col gap-1">
+<label class="font-label-sm text-label-sm px-1">Set Name or Number *</label>
+<input class="w-full h-12 rounded-lg border border-outline-variant bg-surface focus:ring-2 focus:ring-secondary focus:border-secondary font-body-md px-4 outline-none transition-all" placeholder="e.g. 10305 Lion Knights' Castle" required="" type="text"/>
+</div>
+<!-- Status Dropdown -->
+<div class="flex flex-col gap-1">
+<label class="font-label-sm text-label-sm px-1">Inventory Status *</label>
+<select class="w-full h-12 rounded-lg border border-outline-variant bg-surface focus:ring-2 focus:ring-secondary focus:border-secondary font-body-md px-4 outline-none transition-all appearance-none" required="">
+<option disabled="" selected="" value="">Select Status</option>
+<option value="sealed">Sealed (MISB)</option>
+<option value="unbuilt">Unbuilt (Open Box)</option>
+<option value="in-progress">In Progress</option>
+<option value="built">Built / Displayed</option>
+<option value="stored">Archived / Stored</option>
+</select>
+</div>
+</div>
+</section>
+<!-- Metadata Bento Grid -->
+<section class="grid grid-cols-1 md:grid-cols-2 gap-stack-md">
+<!-- Theme & Year -->
+<div class="space-y-stack-md">
+<div class="flex flex-col gap-1">
+<label class="font-label-sm text-label-sm px-1">Theme</label>
+<input class="w-full h-12 rounded-lg border border-outline-variant bg-surface focus:ring-2 focus:ring-secondary focus:border-secondary font-body-md px-4 outline-none" placeholder="e.g. Icons, Technic" type="text"/>
+</div>
+<div class="flex flex-col gap-1">
+<label class="font-label-sm text-label-sm px-1">Release Year</label>
+<input class="w-full h-12 rounded-lg border border-outline-variant bg-surface focus:ring-2 focus:ring-secondary focus:border-secondary font-body-md px-4 outline-none" placeholder="2024" type="number"/>
+</div>
+</div>
+<!-- Piece Count & Purchase Date -->
+<div class="space-y-stack-md">
+<div class="flex flex-col gap-1">
+<label class="font-label-sm text-label-sm px-1">Piece Count</label>
+<input class="w-full h-12 rounded-lg border border-outline-variant bg-surface focus:ring-2 focus:ring-secondary focus:border-secondary font-body-md px-4 outline-none" placeholder="4514" type="number"/>
+</div>
+<div class="flex flex-col gap-1">
+<label class="font-label-sm text-label-sm px-1">Purchase Date</label>
+<input class="w-full h-12 rounded-lg border border-outline-variant bg-surface focus:ring-2 focus:ring-secondary focus:border-secondary font-body-md px-4 outline-none" type="date"/>
+</div>
+</div>
+</section>
+<!-- Advanced Details Section -->
+<section class="bg-surface-container-low p-stack-md rounded-xl space-y-stack-md border border-outline-variant">
+<div class="grid grid-cols-1 md:grid-cols-3 gap-stack-md">
+<div class="flex flex-col gap-1">
+<label class="font-label-sm text-label-sm px-1">Difficulty</label>
+<select class="w-full h-12 rounded-lg border border-outline-variant bg-surface focus:ring-2 focus:ring-secondary font-body-md px-4 outline-none">
+<option>Beginner</option>
+<option>Intermediate</option>
+<option selected="">Advanced</option>
+<option>Master Builder</option>
+</select>
+</div>
+<div class="flex flex-col gap-1">
+<label class="font-label-sm text-label-sm px-1">Build Priority</label>
+<select class="w-full h-12 rounded-lg border border-outline-variant bg-surface focus:ring-2 focus:ring-secondary font-body-md px-4 outline-none">
+<option>Low</option>
+<option selected="">Medium</option>
+<option>High</option>
+<option>Critical (Build Next)</option>
+</select>
+</div>
+<div class="flex flex-col gap-1">
+<label class="font-label-sm text-label-sm px-1">Storage Loc.</label>
+<input class="w-full h-12 rounded-lg border border-outline-variant bg-surface focus:ring-2 focus:ring-secondary font-body-md px-4 outline-none" placeholder="Shelf A1" type="text"/>
+</div>
+</div>
+<div class="flex flex-col gap-1">
+<label class="font-label-sm text-label-sm px-1">Collector's Notes</label>
+<textarea class="w-full rounded-lg border border-outline-variant bg-surface focus:ring-2 focus:ring-secondary focus:border-secondary font-body-md p-4 outline-none transition-all" placeholder="Condition details, missing parts, or purchase price..." rows="3"></textarea>
+</div>
+</section>
+<!-- Automatic Info Footer -->
+<div class="flex items-center justify-between py-2 border-t border-outline-variant">
+<div class="flex items-center gap-2 text-on-surface-variant">
+<span class="material-symbols-outlined text-sm">event</span>
+<span class="font-label-sm text-label-sm">Entry Date: <span id="current-date">October 24, 2023</span></span>
+</div>
+<div class="flex items-center gap-2 text-on-surface-variant">
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">verified_user</span>
+<span class="font-label-sm text-label-sm">System Verified</span>
+</div>
+</div>
+<!-- Action Buttons -->
+<footer class="flex items-center gap-stack-md pt-stack-md">
+<button class="flex-1 h-12 rounded-lg border border-primary text-primary font-title-md hover:bg-primary/5 transition-colors" type="button">
+                    Cancel
+                </button>
+<button class="flex-[2] h-12 rounded-lg bg-primary text-on-primary font-title-md shadow-md active:scale-95 transition-all" type="submit">
+                    Save to Collection
+                </button>
+</footer>
+</form>
+</main>
+<!-- Bottom Navigation Bar -->
+<nav class="fixed bottom-0 left-0 w-full z-50 flex justify-around items-center h-20 pb-safe px-2 bg-surface dark:bg-surface-dim border-t border-outline-variant dark:border-outline">
+<div class="flex flex-col items-center justify-center text-on-surface-variant dark:text-outline-variant px-5 py-1">
+<span class="material-symbols-outlined">dashboard</span>
+<span class="font-label-sm text-label-sm">Home</span>
+</div>
+<div class="flex flex-col items-center justify-center bg-secondary-container dark:bg-on-secondary-fixed-variant text-on-secondary-container dark:text-secondary-fixed rounded-full px-5 py-1">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">inventory_2</span>
+<span class="font-label-sm text-label-sm">Collection</span>
+</div>
+<div class="flex flex-col items-center justify-center text-on-surface-variant dark:text-outline-variant px-5 py-1">
+<span class="material-symbols-outlined">precision_manufacturing</span>
+<span class="font-label-sm text-label-sm">Backlog</span>
+</div>
+<div class="flex flex-col items-center justify-center text-on-surface-variant dark:text-outline-variant px-5 py-1">
+<span class="material-symbols-outlined">inventory</span>
+<span class="font-label-sm text-label-sm">Storage</span>
+</div>
+<div class="flex flex-col items-center justify-center text-on-surface-variant dark:text-outline-variant px-5 py-1">
+<span class="material-symbols-outlined">person</span>
+<span class="font-label-sm text-label-sm">Profile</span>
+</div>
+</nav>
+<script>
+        // Set automatic current date
+        const dateElement = document.getElementById('current-date');
+        const now = new Date();
+        const options = { year: 'numeric', month: 'long', day: 'numeric' };
+        dateElement.textContent = now.toLocaleDateString('en-US', options);
+
+        // Handle image preview
+        const imageUpload = document.getElementById('image-upload');
+        const imagePreview = document.getElementById('image-preview');
+        const imagePlaceholder = document.getElementById('image-placeholder');
+
+        imageUpload.addEventListener('change', function(e) {
+            const file = e.target.files[0];
+            if (file) {
+                const reader = new FileReader();
+                reader.onload = function(event) {
+                    imagePreview.src = event.target.result;
+                    imagePreview.classList.remove('hidden');
+                    imagePlaceholder.classList.add('hidden');
+                };
+                reader.readAsDataURL(file);
+            }
+        });
+
+        // Simple form validation micro-interaction
+        const form = document.getElementById('add-set-form');
+        form.addEventListener('submit', (e) => {
+            e.preventDefault();
+            const btn = e.target.querySelector('button[type="submit"]');
+            btn.innerHTML = '<span class="material-symbols-outlined animate-spin">progress_activity</span> Saving...';
+            btn.disabled = true;
+            
+            setTimeout(() => {
+                alert('Success! Set added to your BrickVault collection.');
+                btn.innerHTML = 'Save to Collection';
+                btn.disabled = false;
+                form.reset();
+                imagePreview.classList.add('hidden');
+                imagePlaceholder.classList.remove('hidden');
+            }, 1200);
+        });
+    </script>
+</body></html>

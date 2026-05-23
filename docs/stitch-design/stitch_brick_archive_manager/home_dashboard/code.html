@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>BrickVault | Home Dashboard</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&amp;family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "outline": "#926e6b",
+                        "on-primary": "#ffffff",
+                        "error-container": "#ffdad6",
+                        "on-tertiary-fixed-variant": "#584400",
+                        "on-surface-variant": "#5d3f3c",
+                        "on-primary-fixed-variant": "#93000f",
+                        "on-surface": "#1a1c1c",
+                        "surface-container-high": "#e8e8e8",
+                        "surface-container": "#eeeeee",
+                        "tertiary-fixed": "#ffe08b",
+                        "on-error-container": "#93000a",
+                        "on-background": "#1a1c1c",
+                        "tertiary": "#745b00",
+                        "surface-container-low": "#f3f3f3",
+                        "error": "#ba1a1a",
+                        "on-secondary": "#ffffff",
+                        "tertiary-fixed-dim": "#f1c100",
+                        "primary-fixed-dim": "#ffb3ac",
+                        "secondary-fixed": "#d5e3ff",
+                        "on-tertiary": "#ffffff",
+                        "surface-tint": "#c00017",
+                        "on-secondary-fixed-variant": "#004689",
+                        "secondary-fixed-dim": "#a8c8ff",
+                        "outline-variant": "#e7bdb8",
+                        "on-primary-container": "#ffdfdc",
+                        "primary-fixed": "#ffdad6",
+                        "on-tertiary-container": "#4f3d00",
+                        "secondary-container": "#72aafe",
+                        "inverse-primary": "#ffb3ac",
+                        "primary-container": "#d0021b",
+                        "on-secondary-fixed": "#001b3c",
+                        "surface": "#f9f9f9",
+                        "surface-container-highest": "#e2e2e2",
+                        "on-secondary-container": "#003d79",
+                        "surface-variant": "#e2e2e2",
+                        "surface-bright": "#f9f9f9",
+                        "tertiary-container": "#d0a600",
+                        "surface-dim": "#dadada",
+                        "on-tertiary-fixed": "#241a00",
+                        "on-error": "#ffffff",
+                        "surface-container-lowest": "#ffffff",
+                        "inverse-on-surface": "#f0f1f1",
+                        "inverse-surface": "#2f3131",
+                        "background": "#f9f9f9",
+                        "secondary": "#175ead",
+                        "on-primary-fixed": "#410003",
+                        "primary": "#a30012"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "margin-mobile": "16px",
+                        "unit": "4px",
+                        "stack-sm": "8px",
+                        "stack-md": "16px",
+                        "stack-lg": "24px",
+                        "gutter": "12px"
+                    },
+                    "fontFamily": {
+                        "headline-lg": ["Inter"],
+                        "headline-lg-mobile": ["Inter"],
+                        "body-md": ["Inter"],
+                        "label-sm": ["Inter"],
+                        "title-md": ["Inter"]
+                    },
+                    "fontSize": {
+                        "headline-lg": ["32px", {"lineHeight": "40px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                        "headline-lg-mobile": ["24px", {"lineHeight": "32px", "letterSpacing": "-0.01em", "fontWeight": "700"}],
+                        "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                        "label-sm": ["12px", {"lineHeight": "16px", "letterSpacing": "0.05em", "fontWeight": "600"}],
+                        "title-md": ["18px", {"lineHeight": "24px", "fontWeight": "600"}]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        body {
+            background-color: #f9f9f9;
+            color: #1a1c1c;
+            font-family: 'Inter', sans-serif;
+        }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .glass-card {
+            background: rgba(255, 255, 255, 0.8);
+            backdrop-filter: blur(8px);
+            border: 1px solid rgba(224, 224, 224, 0.5);
+        }
+        .bento-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            grid-auto-rows: minmax(100px, auto);
+            gap: 12px;
+        }
+        @media (max-width: 768px) {
+            .bento-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background text-on-background min-h-screen pb-24">
+<!-- Top App Bar -->
+<header class="bg-surface sticky top-0 z-50 flex justify-between items-center w-full px-margin-mobile h-16">
+<div class="flex items-center gap-4">
+<span class="material-symbols-outlined text-primary cursor-pointer">grid_view</span>
+<h1 class="font-headline-lg-mobile text-headline-lg-mobile font-bold text-primary">BrickVault</h1>
+</div>
+<div class="w-10 h-10 rounded-full bg-surface-container-high flex items-center justify-center overflow-hidden border border-outline-variant">
+<img alt="User Avatar" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB8JiRQiViefZ7s8hnDQdmahnOCiDmTUW0oQ9dkjxLSK-mivyqvd4PRwyBdFpQulz1kZCCNq6AFPoavZ8dJZylEvn4DQy4a6WrE8fchpyTeT_k1oRcDMrY4dzO1Ix4OVcnCLU2aEWCbADR5OVQZP7h0P2BvgGpVZ4hxoBaGDg2NAFcPb1NpEr_CNmlXucEp52aiRRaUVlGzvN8i69y3_lt03WQfjE1RwJ9z4tK9UM4TPOJ_fjwpKNG0Ubu9MIyPqMOetvW-V82QPb0"/>
+</div>
+</header>
+<main class="px-margin-mobile pt-stack-md space-y-stack-lg max-w-5xl mx-auto">
+<!-- Welcome Section -->
+<section class="flex flex-col gap-unit">
+<h2 class="font-headline-lg-mobile text-headline-lg-mobile text-on-surface">Vault Overview</h2>
+<p class="font-body-md text-body-md text-on-surface-variant">Your collection is worth more than just bricks.</p>
+</section>
+<!-- Stats Bento Grid -->
+<div class="bento-grid">
+<!-- Total Sets -->
+<div class="col-span-2 md:col-span-2 p-stack-md rounded-xl bg-white border border-surface-variant flex flex-col justify-between shadow-sm">
+<div class="flex justify-between items-start">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">Total Collection</span>
+<span class="material-symbols-outlined text-secondary">inventory_2</span>
+</div>
+<div>
+<div class="font-headline-lg text-headline-lg text-on-surface">142</div>
+<div class="font-label-sm text-label-sm text-secondary">+12 this month</div>
+</div>
+</div>
+<!-- Unbuilt -->
+<div class="col-span-1 md:col-span-1 p-stack-md rounded-xl bg-white border border-surface-variant flex flex-col justify-between shadow-sm">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase">Unbuilt</span>
+<div class="flex items-end gap-2">
+<span class="font-title-md text-title-md text-on-surface">24</span>
+<span class="font-label-sm text-label-sm text-tertiary mb-1">17%</span>
+</div>
+</div>
+<!-- Sealed -->
+<div class="col-span-1 md:col-span-1 p-stack-md rounded-xl bg-white border border-surface-variant flex flex-col justify-between shadow-sm">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase">Sealed</span>
+<div class="flex items-end gap-2">
+<span class="font-title-md text-title-md text-on-surface">8</span>
+<span class="font-label-sm text-label-sm text-on-secondary-fixed-variant mb-1">Investment</span>
+</div>
+</div>
+<!-- Longest Waiting Card -->
+<div class="col-span-2 md:col-span-2 row-span-2 rounded-xl overflow-hidden bg-white border border-surface-variant flex flex-col shadow-sm">
+<div class="relative h-40">
+<img class="w-full h-full object-cover" data-alt="A professional, high-resolution studio photograph of a massive, detailed LEGO model of the Titanic ship set against a clean, neutral gray background. The lighting is crisp and dramatic, highlighting the intricate engineering and scale of the model. The overall aesthetic is archival and sophisticated, emphasizing the collectible nature of the item with a modern, high-end museum-quality feel." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCAmUpx8lUZ4_xTnbfUIrv1Hluhx0SrZCxDfhDANXQKt6ejVl4IcDw5H9ypFGSA2arQQ_3G40fWqslJPKMUpJM2Th5oDMinx-E2gZGNmxOP18aMJ3HMZZKDSTC1qVEjRNAj4HHXETprtaM08A-CYo2NW_93yoaUDkXA7ESbXhAdb74NJEwU_7a8MDPEmkHLiI7yAb0Q5EMndPW6yT65KuMMTp0FfcQARxeYQ7ltxuRtqn_r44SQdEJYsJaoqCAEmsaw7gY_Fyy6bIg"/>
+<div class="absolute top-3 left-3 bg-white/90 backdrop-blur px-3 py-1 rounded-full flex items-center gap-2 border border-outline-variant">
+<span class="material-symbols-outlined text-[16px] text-error">hourglass_empty</span>
+<span class="font-label-sm text-label-sm text-on-surface">210 Days</span>
+</div>
+</div>
+<div class="p-stack-md flex flex-col gap-1">
+<span class="font-label-sm text-label-sm text-error uppercase">Longest Waiting</span>
+<h3 class="font-title-md text-title-md text-on-surface">LEGO Icons Titanic</h3>
+<p class="font-body-md text-sm text-on-surface-variant">Set 10294 • 9,090 Pieces</p>
+<button class="mt-stack-sm w-full py-2 bg-surface-container-low border border-outline-variant rounded-lg font-label-sm text-label-sm hover:bg-surface-container-high transition-colors">Mark as Building</button>
+</div>
+</div>
+<!-- Build Next Recommendation -->
+<div class="col-span-2 md:col-span-2 row-span-2 rounded-xl overflow-hidden bg-white border border-surface-variant flex flex-col shadow-sm">
+<div class="relative h-40">
+<img class="w-full h-full object-cover" data-alt="A beautifully lit, macro-focused photograph of a LEGO Bonsai Tree from the Botanical Collection. The scene is set in a minimalist, sun-drenched modern living room with soft wooden textures and white walls. The green and pink blossoms of the tree are vibrant, contrasting against a clean, architectural background. The mood is tranquil, hobbyist-focused, and premium, suggesting a relaxing building experience for adults." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDJXnqKI9qg4aFtBmemyU3YANSFq9IuAlO96pkqFk11Gu0U0ECDSfwOhhFM_Z6f5sUpwitQeHwAS3z5vBcZzhk6p2sq5rCdGnV-vTQSc2GnzK2wYromPudzsGzPsXGem5O8QO-PSGFBrnmZC0ukdyeMDWcMzJIUFwevfhkXr-CMHCdAuImIMMp_C-w6lYeXnvVnG7L8V9qwf7sf8RbS39zuYO1zbMK5ySMYFXjOe0MpRqgqoamfXQ2bKx9dG3j9e-NDv7WYlGPL37Q"/>
+<div class="absolute top-3 right-3 bg-secondary-container text-on-secondary-container px-3 py-1 rounded-full">
+<span class="font-label-sm text-label-sm">Build Next</span>
+</div>
+</div>
+<div class="p-stack-md flex flex-col gap-1">
+<h3 class="font-title-md text-title-md text-on-surface">Botanical Collection</h3>
+<p class="font-body-md text-sm text-on-surface-variant">LEGO Ideas 10281</p>
+<div class="flex items-center gap-stack-sm mt-stack-sm">
+<span class="px-2 py-0.5 bg-tertiary/10 text-tertiary text-[10px] font-bold rounded uppercase">Relaxing Build</span>
+<span class="px-2 py-0.5 bg-surface-container text-on-surface-variant text-[10px] font-bold rounded uppercase">878 PCS</span>
+</div>
+<button class="mt-stack-sm w-full py-2 bg-primary text-on-primary rounded-lg font-label-sm text-label-sm shadow-md active:scale-95 transition-transform">Start Instructions</button>
+</div>
+</div>
+<!-- Recent Activity -->
+<div class="col-span-2 md:col-span-4 p-stack-md rounded-xl bg-white border border-surface-variant shadow-sm">
+<div class="flex justify-between items-center mb-stack-md">
+<h3 class="font-title-md text-title-md text-on-surface">Recent Activity</h3>
+<span class="font-label-sm text-label-sm text-secondary cursor-pointer">View All</span>
+</div>
+<div class="space-y-stack-md">
+<div class="flex items-center gap-4">
+<div class="w-12 h-12 rounded-lg bg-surface-container-low flex items-center justify-center border border-outline-variant">
+<span class="material-symbols-outlined text-on-surface-variant">add_box</span>
+</div>
+<div class="flex-1">
+<p class="font-title-md text-[14px] text-on-surface">Added: Star Wars X-Wing</p>
+<p class="font-body-md text-[12px] text-on-surface-variant">Purchased yesterday • $239.99</p>
+</div>
+<span class="px-2 py-1 bg-[#15803d15] text-[#15803d] text-[10px] font-bold rounded">SEALED</span>
+</div>
+<div class="flex items-center gap-4">
+<div class="w-12 h-12 rounded-lg bg-surface-container-low flex items-center justify-center border border-outline-variant">
+<span class="material-symbols-outlined text-on-surface-variant">build</span>
+</div>
+<div class="flex-1">
+<p class="font-title-md text-[14px] text-on-surface">Completed: Jazz Club</p>
+<p class="font-body-md text-[12px] text-on-surface-variant">Finished 3 days ago • Bag 15/15</p>
+</div>
+<span class="px-2 py-1 bg-[#eab30820] text-[#854d0e] text-[10px] font-bold rounded">FINISHED</span>
+</div>
+</div>
+</div>
+</div>
+</main>
+<!-- Primary FAB -->
+<button class="fixed right-6 bottom-24 w-14 h-14 bg-primary text-on-primary rounded-2xl shadow-xl flex items-center justify-center active:scale-90 transition-transform z-50">
+<span class="material-symbols-outlined text-[32px]">add</span>
+</button>
+<!-- Bottom Navigation Bar -->
+<nav class="fixed bottom-0 left-0 w-full z-50 bg-surface border-t border-outline-variant flex justify-around items-center h-20 pb-safe px-2">
+<!-- Home (Active) -->
+<a class="flex flex-col items-center justify-center bg-secondary-container text-on-secondary-container rounded-full px-5 py-1 scale-95 transition-transform duration-100" href="#">
+<span class="material-symbols-outlined">dashboard</span>
+<span class="font-label-sm text-label-sm">Home</span>
+</a>
+<!-- Collection -->
+<a class="flex flex-col items-center justify-center text-on-surface-variant hover:text-primary px-5 py-1 transition-colors" href="#">
+<span class="material-symbols-outlined">inventory_2</span>
+<span class="font-label-sm text-label-sm">Collection</span>
+</a>
+<!-- Backlog -->
+<a class="flex flex-col items-center justify-center text-on-surface-variant hover:text-primary px-5 py-1 transition-colors" href="#">
+<span class="material-symbols-outlined">precision_manufacturing</span>
+<span class="font-label-sm text-label-sm">Backlog</span>
+</a>
+<!-- Storage -->
+<a class="flex flex-col items-center justify-center text-on-surface-variant hover:text-primary px-5 py-1 transition-colors" href="#">
+<span class="material-symbols-outlined">inventory</span>
+<span class="font-label-sm text-label-sm">Storage</span>
+</a>
+<!-- Profile -->
+<a class="flex flex-col items-center justify-center text-on-surface-variant hover:text-primary px-5 py-1 transition-colors" href="#">
+<span class="material-symbols-outlined">person</span>
+<span class="font-label-sm text-label-sm">Profile</span>
+</a>
+</nav>
+<script>
+        // Micro-interaction for cards
+        document.querySelectorAll('.bento-grid > div').forEach(card => {
+            card.addEventListener('mousedown', () => {
+                card.style.transform = 'scale(0.98)';
+                card.style.transition = 'transform 0.1s ease';
+            });
+            card.addEventListener('mouseup', () => {
+                card.style.transform = 'scale(1)';
+            });
+            card.addEventListener('mouseleave', () => {
+                card.style.transform = 'scale(1)';
+            });
+        });
+    </script>
+</body></html>

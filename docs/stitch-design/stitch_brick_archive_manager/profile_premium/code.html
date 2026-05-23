@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>BrickVault | Profile &amp; Premium</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              "colors": {
+                      "outline": "#926e6b",
+                      "on-primary": "#ffffff",
+                      "error-container": "#ffdad6",
+                      "on-tertiary-fixed-variant": "#584400",
+                      "on-surface-variant": "#5d3f3c",
+                      "on-primary-fixed-variant": "#93000f",
+                      "on-surface": "#1a1c1c",
+                      "surface-container-high": "#e8e8e8",
+                      "surface-container": "#eeeeee",
+                      "tertiary-fixed": "#ffe08b",
+                      "on-error-container": "#93000a",
+                      "on-background": "#1a1c1c",
+                      "tertiary": "#745b00",
+                      "surface-container-low": "#f3f3f3",
+                      "error": "#ba1a1a",
+                      "on-secondary": "#ffffff",
+                      "tertiary-fixed-dim": "#f1c100",
+                      "primary-fixed-dim": "#ffb3ac",
+                      "secondary-fixed": "#d5e3ff",
+                      "on-tertiary": "#ffffff",
+                      "surface-tint": "#c00017",
+                      "on-secondary-fixed-variant": "#004689",
+                      "secondary-fixed-dim": "#a8c8ff",
+                      "outline-variant": "#e7bdb8",
+                      "on-primary-container": "#ffdfdc",
+                      "primary-fixed": "#ffdad6",
+                      "on-tertiary-container": "#4f3d00",
+                      "secondary-container": "#72aafe",
+                      "inverse-primary": "#ffb3ac",
+                      "primary-container": "#d0021b",
+                      "on-secondary-fixed": "#001b3c",
+                      "surface": "#f9f9f9",
+                      "surface-container-highest": "#e2e2e2",
+                      "on-secondary-container": "#003d79",
+                      "surface-variant": "#e2e2e2",
+                      "surface-bright": "#f9f9f9",
+                      "tertiary-container": "#d0a600",
+                      "surface-dim": "#dadada",
+                      "on-tertiary-fixed": "#241a00",
+                      "on-error": "#ffffff",
+                      "surface-container-lowest": "#ffffff",
+                      "inverse-on-surface": "#f0f1f1",
+                      "inverse-surface": "#2f3131",
+                      "background": "#f9f9f9",
+                      "secondary": "#175ead",
+                      "on-primary-fixed": "#410003",
+                      "primary": "#a30012"
+              },
+              "borderRadius": {
+                      "DEFAULT": "0.25rem",
+                      "lg": "0.5rem",
+                      "xl": "0.75rem",
+                      "full": "9999px"
+              },
+              "spacing": {
+                      "margin-mobile": "16px",
+                      "unit": "4px",
+                      "stack-sm": "8px",
+                      "stack-md": "16px",
+                      "stack-lg": "24px",
+                      "gutter": "12px"
+              },
+              "fontFamily": {
+                      "headline-lg": ["Inter"],
+                      "headline-lg-mobile": ["Inter"],
+                      "body-md": ["Inter"],
+                      "label-sm": ["Inter"],
+                      "title-md": ["Inter"]
+              },
+              "fontSize": {
+                      "headline-lg": ["32px", {"lineHeight": "40px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                      "headline-lg-mobile": ["24px", {"lineHeight": "32px", "letterSpacing": "-0.01em", "fontWeight": "700"}],
+                      "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                      "label-sm": ["12px", {"lineHeight": "16px", "letterSpacing": "0.05em", "fontWeight": "600"}],
+                      "title-md": ["18px", {"lineHeight": "24px", "fontWeight": "600"}]
+              }
+            },
+          },
+        }
+      </script>
+<style>
+        body { font-family: 'Inter', sans-serif; -webkit-tap-highlight-color: transparent; }
+        .material-symbols-outlined { font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24; }
+        .premium-gradient { background: linear-gradient(135deg, #a30012 0%, #d0021b 100%); }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-surface text-on-surface">
+<!-- TopAppBar -->
+<header class="bg-surface dark:bg-surface-dim docked full-width top-0 sticky z-50">
+<div class="flex justify-between items-center w-full px-margin-mobile h-16">
+<div class="flex items-center gap-4">
+<span class="material-symbols-outlined text-primary dark:text-primary-fixed-dim" data-icon="grid_view">grid_view</span>
+<h1 class="font-headline-lg-mobile text-headline-lg-mobile font-bold text-primary dark:text-primary-fixed-dim">BrickVault</h1>
+</div>
+<div class="w-10 h-10 rounded-full overflow-hidden border border-outline-variant">
+<img alt="User Profile" data-alt="A clean, professional minimalist profile avatar of an adult LEGO enthusiast. The image is set against a soft, bright white background with clean lines and high-key lighting that reflects a modern Material 3 aesthetic. The color palette is composed of primary reds and neutral grays, ensuring a sophisticated and technical visual identity." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDtKpM1ahL3xljNl3vOQtBKAI4_uo_hvWvKQXOwnpQRZI7DhQIwFAvTcDndafVv_cJEdrTVE8RGiennHNsk0COWmUdQW_VVIF_auX5Yuk64lw26yvWr7Lfkx2ii9e_4aG_XcLcI2UnNYSGcbMC4srJFXyAb3w5-5tVpcIurYOuwTr_3edGAeXNRjJIZCK-yMNaD6NWYnj5bLIfBsSBLCm0VwLoBluRVpVutlvfYtzwc1ToRmSPwwpsyK7_RBZFVBU6EasnfChLUk7A"/>
+</div>
+</div>
+</header>
+<main class="max-w-screen-md mx-auto px-margin-mobile pb-32 pt-stack-md">
+<!-- User Identity Section -->
+<section class="flex items-center gap-stack-md mb-stack-lg p-stack-md bg-surface-container-lowest rounded-xl border border-outline-variant/30">
+<div class="flex-1">
+<h2 class="font-title-md text-title-md text-on-surface">MasterBuilder99</h2>
+<div class="flex items-center gap-1 mt-1">
+<span class="material-symbols-outlined text-[14px] text-on-surface-variant" data-icon="sync">sync</span>
+<p class="font-label-sm text-label-sm text-on-surface-variant uppercase">Synced 5m ago</p>
+</div>
+</div>
+<span class="bg-tertiary-fixed text-on-tertiary-fixed px-3 py-1 rounded-full font-label-sm text-label-sm uppercase">Level 12 Collector</span>
+</section>
+<!-- Premium Upsell Card -->
+<section class="premium-gradient rounded-xl p-stack-md mb-stack-lg shadow-lg relative overflow-hidden">
+<div class="relative z-10">
+<div class="flex justify-between items-start mb-stack-sm">
+<h3 class="font-headline-lg-mobile text-headline-lg-mobile text-on-primary">Upgrade to BrickVault Pro</h3>
+<span class="material-symbols-outlined text-on-primary opacity-80" data-icon="auto_awesome">auto_awesome</span>
+</div>
+<ul class="space-y-stack-sm mb-stack-md">
+<li class="flex items-center gap-2 text-on-primary">
+<span class="material-symbols-outlined text-[18px]" data-icon="check_circle">check_circle</span>
+<span class="font-body-md text-body-md">Unlimited Collection Slots</span>
+</li>
+<li class="flex items-center gap-2 text-on-primary">
+<span class="material-symbols-outlined text-[18px]" data-icon="cloud_sync">cloud_sync</span>
+<span class="font-body-md text-body-md">Full Multi-Device Sync</span>
+</li>
+<li class="flex items-center gap-2 text-on-primary">
+<span class="material-symbols-outlined text-[18px]" data-icon="download">download</span>
+<span class="font-body-md text-body-md">Export Data to CSV/JSON</span>
+</li>
+<li class="flex items-center gap-2 text-on-primary">
+<span class="material-symbols-outlined text-[18px]" data-icon="query_stats">query_stats</span>
+<span class="font-body-md text-body-md">Advanced Investment Stats</span>
+</li>
+</ul>
+<button class="w-full bg-on-primary text-primary py-3 rounded-lg font-title-md text-title-md font-bold active:scale-95 transition-transform">
+                    Start 7-Day Free Trial
+                </button>
+</div>
+<!-- Decorative bricks pattern background (abstracted) -->
+<div class="absolute -right-4 -bottom-4 opacity-10 pointer-events-none">
+<span class="material-symbols-outlined text-[120px] text-on-primary" data-icon="precision_manufacturing">precision_manufacturing</span>
+</div>
+</section>
+<!-- Settings List -->
+<section class="space-y-unit">
+<div class="py-2"><p class="font-label-sm text-label-sm text-on-surface-variant px-stack-sm uppercase">Preferences</p></div>
+<div class="flex items-center gap-stack-md p-stack-md bg-surface-container-lowest rounded-xl active:bg-surface-container-low transition-colors cursor-pointer group">
+<span class="material-symbols-outlined text-on-surface-variant group-active:text-primary" data-icon="bar_chart">bar_chart</span>
+<div class="flex-1">
+<p class="font-title-md text-title-md text-on-surface">Statistics</p>
+<p class="font-label-sm text-label-sm text-on-surface-variant">View value trends &amp; piece counts</p>
+</div>
+<span class="material-symbols-outlined text-outline-variant" data-icon="chevron_right">chevron_right</span>
+</div>
+<div class="flex items-center gap-stack-md p-stack-md bg-surface-container-lowest rounded-xl active:bg-surface-container-low transition-colors cursor-pointer group">
+<span class="material-symbols-outlined text-on-surface-variant group-active:text-primary" data-icon="ios_share">ios_share</span>
+<div class="flex-1">
+<p class="font-title-md text-title-md text-on-surface">Export Data</p>
+<p class="font-label-sm text-label-sm text-on-surface-variant">Generate CSV or JSON backup</p>
+</div>
+<span class="material-symbols-outlined text-outline-variant" data-icon="chevron_right">chevron_right</span>
+</div>
+<div class="flex items-center gap-stack-md p-stack-md bg-surface-container-lowest rounded-xl">
+<span class="material-symbols-outlined text-on-surface-variant" data-icon="dark_mode">dark_mode</span>
+<div class="flex-1">
+<p class="font-title-md text-title-md text-on-surface">Dark Mode</p>
+<p class="font-label-sm text-label-sm text-on-surface-variant">System default enabled</p>
+</div>
+<button class="relative inline-flex h-6 w-11 shrink-0 cursor-pointer rounded-full border-2 border-transparent transition-colors duration-200 ease-in-out focus:outline-none bg-outline-variant" id="darkModeToggle" onclick="toggleDarkMode()">
+<span class="translate-x-0 pointer-events-none inline-block h-5 w-5 transform rounded-full bg-white shadow ring-0 transition duration-200 ease-in-out" id="toggleCircle"></span>
+</button>
+</div>
+<div class="py-stack-md mt-stack-lg">
+<button class="w-full flex items-center justify-center gap-2 border border-error text-error py-stack-md rounded-xl font-title-md text-title-md active:bg-error/10 transition-colors">
+<span class="material-symbols-outlined" data-icon="logout">logout</span>
+                    Sign Out
+                </button>
+<p class="text-center font-label-sm text-label-sm text-on-surface-variant mt-stack-md">BrickVault v2.4.1 (Stable)</p>
+</div>
+</section>
+</main>
+<!-- BottomNavBar -->
+<nav class="fixed bottom-0 left-0 w-full z-50 flex justify-around items-center h-20 pb-safe px-2 bg-surface dark:bg-surface-dim border-t border-outline-variant dark:border-outline">
+<a class="flex flex-col items-center justify-center text-on-surface-variant dark:text-outline-variant px-5 py-1 hover:text-primary dark:hover:text-primary-fixed-dim transition-transform active:scale-95 duration-100" href="#">
+<span class="material-symbols-outlined" data-icon="dashboard">dashboard</span>
+<span class="font-label-sm text-label-sm">Home</span>
+</a>
+<a class="flex flex-col items-center justify-center text-on-surface-variant dark:text-outline-variant px-5 py-1 hover:text-primary dark:hover:text-primary-fixed-dim transition-transform active:scale-95 duration-100" href="#">
+<span class="material-symbols-outlined" data-icon="inventory_2">inventory_2</span>
+<span class="font-label-sm text-label-sm">Collection</span>
+</a>
+<a class="flex flex-col items-center justify-center text-on-surface-variant dark:text-outline-variant px-5 py-1 hover:text-primary dark:hover:text-primary-fixed-dim transition-transform active:scale-95 duration-100" href="#">
+<span class="material-symbols-outlined" data-icon="precision_manufacturing">precision_manufacturing</span>
+<span class="font-label-sm text-label-sm">Backlog</span>
+</a>
+<a class="flex flex-col items-center justify-center text-on-surface-variant dark:text-outline-variant px-5 py-1 hover:text-primary dark:hover:text-primary-fixed-dim transition-transform active:scale-95 duration-100" href="#">
+<span class="material-symbols-outlined" data-icon="inventory">inventory</span>
+<span class="font-label-sm text-label-sm">Storage</span>
+</a>
+<a class="flex flex-col items-center justify-center bg-secondary-container dark:bg-on-secondary-fixed-variant text-on-secondary-container dark:text-secondary-fixed rounded-full px-5 py-1 transition-transform active:scale-95 duration-100" href="#">
+<span class="material-symbols-outlined" data-icon="person" style="font-variation-settings: 'FILL' 1;">person</span>
+<span class="font-label-sm text-label-sm">Profile</span>
+</a>
+</nav>
+<script>
+        function toggleDarkMode() {
+            const html = document.documentElement;
+            const toggle = document.getElementById('darkModeToggle');
+            const circle = document.getElementById('toggleCircle');
+            
+            if (html.classList.contains('dark')) {
+                html.classList.remove('dark');
+                toggle.classList.remove('bg-primary');
+                toggle.classList.add('bg-outline-variant');
+                circle.classList.remove('translate-x-5');
+                circle.classList.add('translate-x-0');
+            } else {
+                html.classList.add('dark');
+                toggle.classList.add('bg-primary');
+                toggle.classList.remove('bg-outline-variant');
+                circle.classList.add('translate-x-5');
+                circle.classList.remove('translate-x-0');
+            }
+        }
+
+        // Pulse effect for premium badge
+        setInterval(() => {
+            const badge = document.querySelector('[data-icon="auto_awesome"]');
+            badge.style.opacity = badge.style.opacity === '1' ? '0.6' : '1';
+            badge.style.transition = 'opacity 1s ease-in-out';
+        }, 2000);
+    </script>
+</body></html>

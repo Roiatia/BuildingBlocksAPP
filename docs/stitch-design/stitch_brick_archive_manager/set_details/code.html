@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Set Details - BrickVault</title>
+<!-- Google Fonts & Material Symbols -->
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&amp;family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              "colors": {
+                      "outline": "#926e6b",
+                      "on-primary": "#ffffff",
+                      "error-container": "#ffdad6",
+                      "on-tertiary-fixed-variant": "#584400",
+                      "on-surface-variant": "#5d3f3c",
+                      "on-primary-fixed-variant": "#93000f",
+                      "on-surface": "#1a1c1c",
+                      "surface-container-high": "#e8e8e8",
+                      "surface-container": "#eeeeee",
+                      "tertiary-fixed": "#ffe08b",
+                      "on-error-container": "#93000a",
+                      "on-background": "#1a1c1c",
+                      "tertiary": "#745b00",
+                      "surface-container-low": "#f3f3f3",
+                      "error": "#ba1a1a",
+                      "on-secondary": "#ffffff",
+                      "tertiary-fixed-dim": "#f1c100",
+                      "primary-fixed-dim": "#ffb3ac",
+                      "secondary-fixed": "#d5e3ff",
+                      "on-tertiary": "#ffffff",
+                      "surface-tint": "#c00017",
+                      "on-secondary-fixed-variant": "#004689",
+                      "secondary-fixed-dim": "#a8c8ff",
+                      "outline-variant": "#e7bdb8",
+                      "on-primary-container": "#ffdfdc",
+                      "primary-fixed": "#ffdad6",
+                      "on-tertiary-container": "#4f3d00",
+                      "secondary-container": "#72aafe",
+                      "inverse-primary": "#ffb3ac",
+                      "primary-container": "#d0021b",
+                      "on-secondary-fixed": "#001b3c",
+                      "surface": "#f9f9f9",
+                      "surface-container-highest": "#e2e2e2",
+                      "on-secondary-container": "#003d79",
+                      "surface-variant": "#e2e2e2",
+                      "surface-bright": "#f9f9f9",
+                      "tertiary-container": "#d0a600",
+                      "surface-dim": "#dadada",
+                      "on-tertiary-fixed": "#241a00",
+                      "on-error": "#ffffff",
+                      "surface-container-lowest": "#ffffff",
+                      "inverse-on-surface": "#f0f1f1",
+                      "inverse-surface": "#2f3131",
+                      "background": "#f9f9f9",
+                      "secondary": "#175ead",
+                      "on-primary-fixed": "#410003",
+                      "primary": "#a30012"
+              },
+              "borderRadius": {
+                      "DEFAULT": "0.25rem",
+                      "lg": "0.5rem",
+                      "xl": "0.75rem",
+                      "full": "9999px"
+              },
+              "spacing": {
+                      "margin-mobile": "16px",
+                      "unit": "4px",
+                      "stack-sm": "8px",
+                      "stack-md": "16px",
+                      "stack-lg": "24px",
+                      "gutter": "12px"
+              },
+              "fontFamily": {
+                      "headline-lg": ["Inter"],
+                      "headline-lg-mobile": ["Inter"],
+                      "body-md": ["Inter"],
+                      "label-sm": ["Inter"],
+                      "title-md": ["Inter"]
+              },
+              "fontSize": {
+                      "headline-lg": ["32px", {"lineHeight": "40px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                      "headline-lg-mobile": ["24px", {"lineHeight": "32px", "letterSpacing": "-0.01em", "fontWeight": "700"}],
+                      "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                      "label-sm": ["12px", {"lineHeight": "16px", "letterSpacing": "0.05em", "fontWeight": "600"}],
+                      "title-md": ["18px", {"lineHeight": "24px", "fontWeight": "600"}]
+              }
+            },
+          },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .hero-gradient {
+            background: linear-gradient(180deg, rgba(0,0,0,0) 0%, rgba(0,0,0,0.6) 100%);
+        }
+        .glass-card {
+            background: rgba(255, 255, 255, 0.8);
+            backdrop-filter: blur(8px);
+            border: 1px solid rgba(224, 224, 224, 0.5);
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-surface text-on-surface font-body-md min-h-screen pb-24">
+<!-- Top App Bar (Shared Component Context) -->
+<header class="bg-surface dark:bg-surface-dim flex justify-between items-center w-full px-margin-mobile h-16 sticky top-0 z-40">
+<div class="flex items-center gap-4">
+<button class="hover:bg-surface-container-low dark:hover:bg-surface-container-high p-2 rounded-full transition-opacity active:opacity-80">
+<span class="material-symbols-outlined text-primary dark:text-primary-fixed-dim">arrow_back</span>
+</button>
+<h1 class="font-headline-lg-mobile text-headline-lg-mobile font-bold text-primary dark:text-primary-fixed-dim">Set Details</h1>
+</div>
+<div class="flex items-center gap-2">
+<button class="material-symbols-outlined text-on-surface-variant p-2">more_vert</button>
+</div>
+</header>
+<main class="max-w-4xl mx-auto">
+<!-- Hero Section -->
+<section class="relative w-full aspect-[16/9] md:aspect-[21/9] overflow-hidden">
+<img class="w-full h-full object-cover" data-alt="A detailed high-resolution photograph of the LEGO The Lord of the Rings Rivendell set, showcasing the intricate elven architecture with its iconic white columns, autumn-colored foliage in gold and orange, and the Council of Elrond circle. The lighting is soft and cinematic, highlighting the professional, museum-quality building techniques. The background is a clean, neutral studio setting to emphasize the vibrant colors and sophisticated engineering of the adult-oriented hobbyist kit." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDV8IjemFSSpfd1IaEtgc3g9VlcgifzagZccA04PXaDXbeZe5fzfjQuiAl14YHHGfGqIDP8P6LzJQGdmq6vrUA0wPv-ugLArtn2GgcgRogwwCwjiasCLCQEw1oEXsMInM7YbUDyJ6D5YnPJKQwlNHYLCDRetaTT0Kt0VWF8pgL84zBifoE6oXLFkBsxqKTNXBEvIURtlS8nuVKaj5X0ajrC_doOoQdmzvCwmU1kAW1hzlfJnvidn9Q7O0_kjT5QjCW2AFDboRktR0M"/>
+<div class="absolute bottom-0 left-0 w-full p-margin-mobile hero-gradient text-white flex flex-col justify-end">
+<span class="text-label-sm font-label-sm bg-primary px-2 py-1 rounded w-fit mb-2">10316</span>
+<h2 class="font-headline-lg-mobile text-headline-lg-mobile font-bold">The Lord of the Rings: Rivendell</h2>
+<p class="opacity-90 font-label-sm uppercase tracking-wider">Icons / Lord of the Rings</p>
+</div>
+</section>
+<!-- Information Bento Grid -->
+<div class="px-margin-mobile -mt-6 relative z-10 grid grid-cols-2 md:grid-cols-4 gap-gutter">
+<!-- Primary Stats -->
+<div class="bg-surface-container-lowest p-4 rounded-xl shadow-sm border border-outline-variant flex flex-col items-center justify-center text-center">
+<span class="material-symbols-outlined text-primary mb-1">precision_manufacturing</span>
+<span class="font-label-sm text-on-surface-variant">Pieces</span>
+<span class="font-title-md text-primary">6,167</span>
+</div>
+<div class="bg-surface-container-lowest p-4 rounded-xl shadow-sm border border-outline-variant flex flex-col items-center justify-center text-center">
+<span class="material-symbols-outlined text-tertiary mb-1">calendar_today</span>
+<span class="font-label-sm text-on-surface-variant">Year</span>
+<span class="font-title-md text-tertiary">2023</span>
+</div>
+<div class="bg-surface-container-lowest p-4 rounded-xl shadow-sm border border-outline-variant flex flex-col items-center justify-center text-center">
+<span class="material-symbols-outlined text-secondary mb-1">fitness_center</span>
+<span class="font-label-sm text-on-surface-variant">Difficulty</span>
+<span class="font-title-md text-secondary">Hard</span>
+</div>
+<div class="bg-surface-container-lowest p-4 rounded-xl shadow-sm border border-outline-variant flex flex-col items-center justify-center text-center">
+<span class="material-symbols-outlined text-outline mb-1">inventory_2</span>
+<span class="font-label-sm text-on-surface-variant">Status</span>
+<span class="font-label-sm px-3 py-1 bg-surface-container-high rounded-full mt-1 text-on-surface-variant">UNBUILT</span>
+</div>
+</div>
+<!-- Quick Actions -->
+<div class="px-margin-mobile mt-stack-lg flex flex-wrap gap-stack-sm overflow-x-auto pb-2 scrollbar-hide">
+<button class="bg-primary text-on-primary px-4 py-2 rounded-lg font-label-sm flex items-center gap-2 active:scale-95 transition-transform">
+<span class="material-symbols-outlined text-[18px]">edit</span> Edit Set
+            </button>
+<button class="bg-surface-container-lowest border border-primary text-primary px-4 py-2 rounded-lg font-label-sm flex items-center gap-2 active:scale-95 transition-transform">
+<span class="material-symbols-outlined text-[18px]">published_with_changes</span> Change Status
+            </button>
+<button class="bg-surface-container-lowest border border-outline-variant text-on-surface-variant px-4 py-2 rounded-lg font-label-sm flex items-center gap-2 active:scale-95 transition-transform">
+<span class="material-symbols-outlined text-[18px]">location_on</span> Assign Location
+            </button>
+</div>
+<!-- Details List & Notes -->
+<div class="px-margin-mobile mt-stack-lg space-y-gutter">
+<!-- Metadata Card -->
+<div class="bg-surface-container-lowest rounded-xl border border-outline-variant overflow-hidden">
+<div class="p-4 border-b border-outline-variant bg-surface-container-low">
+<h3 class="font-title-md text-title-md flex items-center gap-2">
+<span class="material-symbols-outlined">info</span> Acquisition Details
+                    </h3>
+</div>
+<div class="divide-y divide-outline-variant">
+<div class="flex justify-between p-4">
+<span class="text-on-surface-variant">Purchase Date</span>
+<span class="font-semibold">Mar 12, 2023</span>
+</div>
+<div class="flex justify-between p-4">
+<span class="text-on-surface-variant">Date Added</span>
+<span class="font-semibold">Mar 15, 2023</span>
+</div>
+<div class="flex justify-between p-4">
+<span class="text-on-surface-variant">Priority</span>
+<span class="text-primary font-bold">High</span>
+</div>
+<div class="flex justify-between p-4">
+<span class="text-on-surface-variant">Storage Location</span>
+<span class="bg-secondary-container text-on-secondary-container px-2 py-0.5 rounded text-label-sm">Shelf A1</span>
+</div>
+</div>
+</div>
+<!-- Notes & Missing Parts Grid -->
+<div class="grid grid-cols-1 md:grid-cols-2 gap-gutter">
+<!-- Notes -->
+<div class="bg-surface-container-lowest rounded-xl border border-outline-variant p-4">
+<div class="flex justify-between items-center mb-stack-md">
+<h3 class="font-title-md text-title-md flex items-center gap-2">
+<span class="material-symbols-outlined text-tertiary">notes</span> Notes
+                        </h3>
+<button class="material-symbols-outlined text-outline-variant">edit_note</button>
+</div>
+<p class="text-on-surface-variant italic">
+                        "Planned for winter build. Need to clear shelf space in the study first. Considering adding custom lighting kit from LightMyBricks."
+                    </p>
+</div>
+<!-- Missing Parts -->
+<div class="bg-surface-container-lowest rounded-xl border border-outline-variant p-4">
+<div class="flex justify-between items-center mb-stack-md">
+<h3 class="font-title-md text-title-md flex items-center gap-2">
+<span class="material-symbols-outlined text-error">extension_off</span> Missing Parts
+                        </h3>
+<button class="bg-primary-container text-on-primary-container p-1 rounded-full flex items-center">
+<span class="material-symbols-outlined text-[18px]">add</span>
+</button>
+</div>
+<ul class="space-y-2">
+<li class="flex items-center justify-between text-sm p-2 bg-surface-container rounded-lg">
+<div class="flex items-center gap-3">
+<div class="w-8 h-8 bg-white rounded border border-outline-variant flex items-center justify-center font-bold text-[10px]">3001</div>
+<span>2x4 Brick (Tan)</span>
+</div>
+<span class="text-error font-bold">x2</span>
+</li>
+<li class="text-center py-4 text-outline-variant italic text-sm">
+                            No other missing parts reported.
+                        </li>
+</ul>
+</div>
+</div>
+</div>
+</main>
+<!-- Bottom Navigation (Shared Component Logic) -->
+<nav class="fixed bottom-0 left-0 w-full z-50 flex justify-around items-center h-20 pb-safe px-2 bg-surface dark:bg-surface-dim border-t border-outline-variant dark:border-outline">
+<button class="flex flex-col items-center justify-center text-on-surface-variant dark:text-outline-variant px-5 py-1 hover:text-primary dark:hover:text-primary-fixed-dim transition-transform duration-100 active:scale-95">
+<span class="material-symbols-outlined">dashboard</span>
+<span class="font-label-sm text-label-sm">Home</span>
+</button>
+<button class="flex flex-col items-center justify-center bg-secondary-container dark:bg-on-secondary-fixed-variant text-on-secondary-container dark:text-secondary-fixed rounded-full px-5 py-1 transition-transform duration-100 active:scale-95">
+<span class="material-symbols-outlined">inventory_2</span>
+<span class="font-label-sm text-label-sm">Collection</span>
+</button>
+<button class="flex flex-col items-center justify-center text-on-surface-variant dark:text-outline-variant px-5 py-1 hover:text-primary dark:hover:text-primary-fixed-dim transition-transform duration-100 active:scale-95">
+<span class="material-symbols-outlined">precision_manufacturing</span>
+<span class="font-label-sm text-label-sm">Backlog</span>
+</button>
+<button class="flex flex-col items-center justify-center text-on-surface-variant dark:text-outline-variant px-5 py-1 hover:text-primary dark:hover:text-primary-fixed-dim transition-transform duration-100 active:scale-95">
+<span class="material-symbols-outlined">inventory</span>
+<span class="font-label-sm text-label-sm">Storage</span>
+</button>
+<button class="flex flex-col items-center justify-center text-on-surface-variant dark:text-outline-variant px-5 py-1 hover:text-primary dark:hover:text-primary-fixed-dim transition-transform duration-100 active:scale-95">
+<span class="material-symbols-outlined">person</span>
+<span class="font-label-sm text-label-sm">Profile</span>
+</button>
+</nav>
+<script>
+        // Micro-interactions for buttons
+        document.querySelectorAll('button').forEach(btn => {
+            btn.addEventListener('touchstart', () => btn.classList.add('opacity-80'));
+            btn.addEventListener('touchend', () => btn.classList.remove('opacity-80'));
+        });
+    </script>
+</body></html>
